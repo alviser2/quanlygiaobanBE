@@ -1,0 +1,130 @@
+// Theme variables for Light and Dark mode
+// ============================================
+
+// DARK MODE (Default)
+.dark-mode {
+  // Background
+  --bg-main-gradient: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193B);
+  --bg-main: #1B1E3F;
+  --bg-custom-dark: #040620;
+  --bg-light: #12142B;
+  --bg-widget: rgba(0, 0, 0, 0.24);
+  --bg-addition: #1a1d35;
+  
+  // Text colors
+  --text-primary: rgba(244, 244, 245, 0.9);
+  --text-secondary: #404045;
+  --text-muted: #a3aeb7;
+  
+  // Border & accents
+  --border-color: rgba(51, 51, 51, 0.35);
+  --sidebar-hover-bg: rgba(0, 0, 0, 0.07);
+  --input-bg: #12142B;
+  --input-border: white;
+  
+  // Component specific
+  --header-bg: #12142B80;
+  --sidebar-bg: transparent;
+}
+
+// LIGHT MODE
+.light-mode {
+  // Background
+  --bg-main-gradient: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  --bg-main: #ffffff;
+  --bg-custom-dark: #f8f9fa;
+  --bg-light: #f1f3f5;
+  --bg-widget: #ffffff;
+  --bg-addition: #f8f9fa;
+  
+  // Text colors
+  --text-primary: #2c3e50;
+  --text-secondary: #576471;
+  --text-muted: #95a5a6;
+  
+  // Border & accents
+  --border-color: #e0e0e0;
+  --sidebar-hover-bg: rgba(52, 73, 94, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #d0d0d0;
+  
+  // Component specific
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --sidebar-bg: #f8f9fa;
+  
+  // Box shadows for light mode
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode body {
+  color: #1f2937;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9eff6 100%);
+}
+
+.light-mode .page-title,
+.light-mode .page-title small,
+.light-mode .fw-semi-bold,
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode p,
+.light-mode label,
+.light-mode td,
+.light-mode th,
+.light-mode .text-white {
+  color: #1f2937 !important;
+}
+
+.light-mode .widget {
+  background: #ffffff !important;
+  color: #334155 !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08) !important;
+  border: 1px solid #e5e7eb;
+}
+
+.light-mode .widget > header,
+.light-mode .widget > header h1,
+.light-mode .widget > header h2,
+.light-mode .widget > header h3,
+.light-mode .widget > header h4,
+.light-mode .widget > header h5,
+.light-mode .widget > header h6 {
+  color: #0f172a !important;
+}
+
+.light-mode .form-control,
+.light-mode .input-group-text,
+.light-mode .input-group-addon,
+.light-mode .input-transparent,
+.light-mode .bg-custom-dark {
+  background: #f8fafc !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+.light-mode .table thead th {
+  color: #1e293b !important;
+  border-bottom-color: #dbe1ea !important;
+}
+
+.light-mode .table tbody td {
+  color: #334155 !important;
+  border-top-color: #e5e7eb !important;
+}
+
+.light-mode .navbar,
+.light-mode .navbar .nav-link,
+.light-mode .logo {
+  color: #1f2937 !important;
+}
+
+.light-mode .sidebar {
+  color: #334155 !important;
+}
+
+.light-mode .badge {
+  color: #fff !important;
+}

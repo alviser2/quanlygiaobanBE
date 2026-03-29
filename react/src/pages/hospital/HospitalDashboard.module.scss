@@ -1,0 +1,307 @@
+@import '../../styles/app';
+
+.root {
+  :global {
+    .table th,
+    .table td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.statCard {
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  :global(.widget-body) {
+    min-height: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.activeCard {
+  border-color: rgba(57, 121, 246, 0.6);
+  box-shadow: 0 0 0 2px rgba(57, 121, 246, 0.2);
+}
+
+.cardAction {
+  border: none;
+  background: transparent;
+  color: #6ea8ff;
+  outline: none;
+  font-size: 0.85rem;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+
+.taskToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.taskSectionTitle {
+  color: #e8edf8;
+}
+
+.quickFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filterBtn {
+  border: 1px solid rgba(148, 163, 184, 0.45) !important;
+  color: #e2e8f0 !important;
+  background: rgba(51, 65, 85, 0.55) !important;
+}
+
+.filterBtn:hover,
+.filterBtn:focus {
+  color: #ffffff !important;
+  background: rgba(71, 85, 105, 0.75) !important;
+}
+
+.filterBtnActive {
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.taskTable {
+  :global {
+    th {
+      color: #dbe4ff;
+      border-bottom-color: rgba(148, 163, 184, 0.28);
+    }
+
+    td {
+      color: #d8e1f7;
+      border-top-color: rgba(148, 163, 184, 0.18);
+    }
+  }
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.statusCompleted {
+  background: rgba(40, 167, 69, 0.2);
+  color: #61d57a;
+}
+
+.statusOverdue {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff6b7a;
+}
+
+.statusInProgress {
+  background: rgba(23, 162, 184, 0.2);
+  color: #67d6ea;
+}
+
+.statusAssigned {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffd86a;
+}
+
+.directiveHistory {
+  margin-top: 0.75rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.savedMinutesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.savedMinuteItem {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding: 0.55rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.35);
+}
+
+.savedMinuteItemActive {
+  border-color: rgba(59, 130, 246, 0.65);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.16);
+}
+
+.savedMinuteSelectBtn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #e2e8f0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  span {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+  }
+
+  small {
+    color: #94a3b8;
+  }
+}
+
+.minutePreview {
+  margin-top: 0.9rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.4);
+
+  h6 {
+    color: #f1f5f9;
+    margin-bottom: 0.45rem;
+  }
+
+  p {
+    margin-bottom: 0.4rem;
+    color: #dbe3f5;
+  }
+}
+
+.directiveList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(57, 121, 246, 0.12);
+
+    + li {
+      margin-top: 0.5rem;
+    }
+
+    small {
+      opacity: 0.8;
+    }
+  }
+}
+
+:global(.light-mode) {
+  .formLabel {
+    color: #334155;
+  }
+
+  .cardAction {
+    color: #1d4ed8;
+  }
+
+  .taskSectionTitle {
+    color: #0f172a;
+  }
+
+  .filterBtn {
+    color: #1f2937 !important;
+    border-color: #cbd5e1 !important;
+    background: #f8fafc !important;
+  }
+
+  .filterBtn:hover,
+  .filterBtn:focus {
+    color: #0f172a !important;
+    background: #e2e8f0 !important;
+  }
+
+  .taskTable {
+    :global {
+      th {
+        color: #1e293b;
+      }
+
+      td {
+        color: #334155;
+      }
+    }
+  }
+
+  .statusCompleted {
+    background: rgba(22, 163, 74, 0.14);
+    color: #166534;
+  }
+
+  .statusOverdue {
+    background: rgba(220, 38, 38, 0.14);
+    color: #991b1b;
+  }
+
+  .statusInProgress {
+    background: rgba(37, 99, 235, 0.14);
+    color: #1d4ed8;
+  }
+
+  .statusAssigned {
+    background: rgba(245, 158, 11, 0.14);
+    color: #92400e;
+  }
+
+  .directiveList li {
+    background: rgba(29, 78, 216, 0.08);
+  }
+
+  .savedMinuteItem {
+    border-color: #dbe3ee;
+    background: #f8fafc;
+  }
+
+  .savedMinuteItemActive {
+    border-color: rgba(37, 99, 235, 0.55);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.14);
+  }
+
+  .savedMinuteSelectBtn {
+    color: #1e293b;
+
+    span {
+      color: #334155;
+    }
+
+    small {
+      color: #64748b;
+    }
+  }
+
+  .minutePreview {
+    border-color: #dbe3ee;
+    background: #f8fafc;
+
+    h6 {
+      color: #0f172a;
+    }
+
+    p {
+      color: #334155;
+    }
+  }
+}
