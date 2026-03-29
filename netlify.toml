@@ -6,3 +6,17 @@
 [build.environment]
   NODE_VERSION = "18"
   NODE_OPTIONS = "--openssl-legacy-provider"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[dev]
+  command = "npm start"
+  port = 3000
+  targetPort = 3000
